@@ -13,7 +13,7 @@ struct MyCertificateView: View {
                     .foregroundColor(Color.topBgGray)
                     .ignoresSafeArea()
                 HStack{
-                    VStack(alignment: .leading, spacing: 4){
+                    VStack(alignment: .leading){
                         Text(showCertificate ? "코로나 19 예방접종 내역" : "본인인증 수단이 추가되었습니다!" )
                             .font(.system(size: 16))
                             .foregroundColor(Color.topDarkGray)
@@ -27,11 +27,13 @@ struct MyCertificateView: View {
                                 .frame(width: 75, height: 26)
                                 .opacity(showCertificate ? 1.0 : 0.0)
                         }
+                        
                     }
-                    .padding(.leading , 37)
-                    .offset(y: 20)
+                    .padding(.leading , 32)
+                    .offset(y: 72)
                     Spacer()
                 }
+                .ignoresSafeArea()
             }
             .ignoresSafeArea()
             Spacer()
